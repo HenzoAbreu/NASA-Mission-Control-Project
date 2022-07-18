@@ -1,10 +1,10 @@
 name: NASA Project CI
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
-jobs: 
+    branches: [main]
+jobs:
   build:
     env:
       CI: true
@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x]
-        mongodb-version: ['4.4']
+        mongodb-version: ["4.4"]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
